@@ -1,2 +1,5 @@
 # ambiente virtual
 .venv
+
+#pycache
+*pytest_cache*
