@@ -27,9 +27,16 @@ def calcula_stime(path):
 def converte_timestamp_para_datetime(timestamp):
 
     data_convertida = datetime.fromtimestamp(timestamp)
-    print(data_convertida)
-    
+
     return data_convertida
+
+def calcula_diferença_de_dias(data_calculo, data_base=datetime.now()):
+    diferenca_de_tempo = data_calculo - data_base
+    diferenca_de_dias = diferenca_de_tempo.days
+
+    return diferenca_de_dias
+
+
 
     
             
