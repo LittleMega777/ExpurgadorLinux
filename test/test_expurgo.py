@@ -1,5 +1,5 @@
-from src.main import listdir, retorna_path_de_arquivos, calcula_stime
-
+from src.main import retorna_path_de_arquivos, calcula_stime, converte_timestamp_para_datetime
+import datetime
 
 path_raiz = "."
 
@@ -19,4 +19,13 @@ def test_verifica_stime():
 
     calcula_stime(lista_de_arquivos)
     ...
+
+def test_converte_timestamp_para_datetime():
+
+    data_convertida = converte_timestamp_para_datetime(1.0)
+
+    data_correta_timestamp = datetime.datetime(year=1969, month=12, day=31, hour=21, minute=0,second=1)
+
+    assert isinstance(data_convertida, datetime.datetime)
+    assert data_convertida == data_correta_timestamp
     
